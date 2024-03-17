@@ -1,0 +1,19 @@
+server:
+  port: 8082
+  servlet:
+    context-path: /cards
+spring:
+  application:
+    name: cards
+  datasource:
+    url: jdbc:mysql://localhost:3306/db?allowPublicKeyRetrieval=true&useSSL=false
+    username: user
+    password: password
+  jpa:
+    show-sql: false
+eureka:
+  client:
+    enabled: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+accounts.service.url: http://localhost:8081/account
